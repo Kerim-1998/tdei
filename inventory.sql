@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 09, 2022 at 11:56 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Хост: 127.0.0.1
+-- Время создания: Мар 23 2022 г., 06:04
+-- Версия сервера: 10.1.38-MariaDB
+-- Версия PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `inventory`
+-- База данных: `inventory`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `baradas`
+-- Структура таблицы `baradas`
 --
 
 CREATE TABLE `baradas` (
@@ -42,7 +42,7 @@ CREATE TABLE `baradas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `baradas`
+-- Дамп данных таблицы `baradas`
 --
 
 INSERT INTO `baradas` (`id`, `tema_tm`, `tema_ru`, `tema_en`, `dusundiris_tm`, `dusundiris_ru`, `dusundiris_en`, `photo`, `created_at`, `updated_at`) VALUES
@@ -51,7 +51,7 @@ INSERT INTO `baradas` (`id`, `tema_tm`, `tema_ru`, `tema_en`, `dusundiris_tm`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `baslesiks`
+-- Структура таблицы `baslesiks`
 --
 
 CREATE TABLE `baslesiks` (
@@ -67,10 +67,20 @@ CREATE TABLE `baslesiks` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `baslesiks`
+--
+
+INSERT INTO `baslesiks` (`id`, `at_tm`, `at_ru`, `at_en`, `dusundiris_tm`, `dusundiris_ru`, `dusundiris_en`, `yyl_id`, `created_at`, `updated_at`) VALUES
+(1, 'sad', 'asdas', 'dasd', 'asdas', 'dasd', 'asdasd', '3', '2022-03-14 13:14:51', '2022-03-14 13:14:51'),
+(2, 'asd', 'asdas', 'dasd', 'asdasd', 'asdas', 'dasd', '4', '2022-03-14 13:14:58', '2022-03-14 13:14:58'),
+(3, 'asdas', 'dasd', 'asdasd', 'sadasdas', 'dasd', 'asdasdas', '5', '2022-03-14 13:15:04', '2022-03-14 13:15:04'),
+(4, 'asdsa', 'dsad', 'asd', 'asdasd', 'sad', 'asd', '3', '2022-03-14 13:15:09', '2022-03-14 13:15:09');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `carousels`
+-- Структура таблицы `carousels`
 --
 
 CREATE TABLE `carousels` (
@@ -88,7 +98,7 @@ CREATE TABLE `carousels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `carousels`
+-- Дамп данных таблицы `carousels`
 --
 
 INSERT INTO `carousels` (`id`, `h1texttm`, `h1textru`, `h1texten`, `spantexttm`, `spantextru`, `spantexten`, `photo`, `nid`, `created_at`, `updated_at`) VALUES
@@ -98,7 +108,7 @@ INSERT INTO `carousels` (`id`, `h1texttm`, `h1textru`, `h1texten`, `spantexttm`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Структура таблицы `categories`
 --
 
 CREATE TABLE `categories` (
@@ -111,7 +121,7 @@ CREATE TABLE `categories` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Структура таблицы `customers`
 --
 
 CREATE TABLE `customers` (
@@ -128,7 +138,7 @@ CREATE TABLE `customers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `eders`
+-- Структура таблицы `eders`
 --
 
 CREATE TABLE `eders` (
@@ -144,7 +154,7 @@ CREATE TABLE `eders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `eders`
+-- Дамп данных таблицы `eders`
 --
 
 INSERT INTO `eders` (`id`, `ders_at_tm`, `ders_at_ru`, `ders_at_en`, `mug_at_tm`, `mug_at_ru`, `mug_at_en`, `created_at`, `updated_at`) VALUES
@@ -153,7 +163,7 @@ INSERT INTO `eders` (`id`, `ders_at_tm`, `ders_at_ru`, `ders_at_en`, `mug_at_tm`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `edusundiris`
+-- Структура таблицы `edusundiris`
 --
 
 CREATE TABLE `edusundiris` (
@@ -166,7 +176,7 @@ CREATE TABLE `edusundiris` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `edusundiris`
+-- Дамп данных таблицы `edusundiris`
 --
 
 INSERT INTO `edusundiris` (`id`, `dusundiris_tm`, `dusundiris_ru`, `dusundiris_en`, `created_at`, `updated_at`) VALUES
@@ -175,7 +185,7 @@ INSERT INTO `edusundiris` (`id`, `dusundiris_tm`, `dusundiris_ru`, `dusundiris_e
 -- --------------------------------------------------------
 
 --
--- Table structure for table `expenses`
+-- Структура таблицы `expenses`
 --
 
 CREATE TABLE `expenses` (
@@ -190,7 +200,7 @@ CREATE TABLE `expenses` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `extra`
+-- Структура таблицы `extra`
 --
 
 CREATE TABLE `extra` (
@@ -208,7 +218,7 @@ CREATE TABLE `extra` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Структура таблицы `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -223,7 +233,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `files`
+-- Структура таблицы `files`
 --
 
 CREATE TABLE `files` (
@@ -238,7 +248,7 @@ CREATE TABLE `files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `files`
+-- Дамп данных таблицы `files`
 --
 
 INSERT INTO `files` (`id`, `file`, `file_at_tm`, `file_at_ru`, `file_at_en`, `ugur_id`, `created_at`, `updated_at`) VALUES
@@ -267,7 +277,7 @@ INSERT INTO `files` (`id`, `file`, `file_at_tm`, `file_at_ru`, `file_at_en`, `ug
 -- --------------------------------------------------------
 
 --
--- Table structure for table `habars`
+-- Структура таблицы `habars`
 --
 
 CREATE TABLE `habars` (
@@ -282,18 +292,19 @@ CREATE TABLE `habars` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `habars`
+-- Дамп данных таблицы `habars`
 --
 
 INSERT INTO `habars` (`id`, `at`, `email`, `tema`, `phone`, `message`, `created_at`, `updated_at`) VALUES
-(1, 'asdas', 'dasdasd@gmasd', 'asdas', 'dasdas', 'asdasdasd', '2022-03-03 12:12:01', '2022-03-03 12:12:01'),
 (2, 'Kerim', 'kgullyewprog@gmail.com', 'Okuw barada', '+99361167930', 'dfgjdfklgjdkf gjdf gjsd gdjfklgjsdf;klgjsdfgj dfgjsdfg sdf gsdfgsd', '2022-03-05 15:01:14', '2022-03-05 15:01:14'),
-(3, 'sdfsdf', 'kgullyewprog@gmail.com', 'asdas', '+99361167930', 'fsdfsdgsdgsdfg', '2022-03-05 15:02:35', '2022-03-05 15:02:35');
+(3, 'sdfsdf', 'kgullyewprog@gmail.com', 'asdas', '+99361167930', 'fsdfsdgsdgsdfg', '2022-03-05 15:02:35', '2022-03-05 15:02:35'),
+(4, 'Pylany', 'dasdasd@gmasd', 'sghfhsdf', '+93348748541', 'asdgsdfgsdfgaregsdfg fghxdf', '2022-03-10 11:50:32', '2022-03-10 11:50:32'),
+(5, 'Kerim', 'kgullyewprog@gmail.com', 'Okuw barada', '+99361167930', 'ewrtfetfgdgdfg', '2022-03-10 12:55:34', '2022-03-10 12:55:34');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hyzmats`
+-- Структура таблицы `hyzmats`
 --
 
 CREATE TABLE `hyzmats` (
@@ -308,7 +319,7 @@ CREATE TABLE `hyzmats` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `hyzmats`
+-- Дамп данных таблицы `hyzmats`
 --
 
 INSERT INTO `hyzmats` (`id`, `hyz_at_tm`, `hyz_at_ru`, `hyz_at_en`, `link`, `photo`, `created_at`, `updated_at`) VALUES
@@ -322,7 +333,7 @@ INSERT INTO `hyzmats` (`id`, `hyz_at_tm`, `hyz_at_ru`, `hyz_at_en`, `link`, `pho
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kafwebols`
+-- Структура таблицы `kafwebols`
 --
 
 CREATE TABLE `kafwebols` (
@@ -343,7 +354,7 @@ CREATE TABLE `kafwebols` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `kafwebols`
+-- Дамп данных таблицы `kafwebols`
 --
 
 INSERT INTO `kafwebols` (`id`, `kaf_photo`, `kaf_at_tm`, `kaf_at_ru`, `kaf_at_en`, `gysga_text_tm`, `gysga_text_ru`, `gysga_text_en`, `dusundiris_tm`, `dusundiris_ru`, `dusundiris_en`, `bol_photo`, `created_at`, `updated_at`) VALUES
@@ -367,7 +378,7 @@ INSERT INTO `kafwebols` (`id`, `kaf_photo`, `kaf_at_tm`, `kaf_at_ru`, `kaf_at_en
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Структура таблицы `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -377,7 +388,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Дамп данных таблицы `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -420,7 +431,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mugustuns`
+-- Структура таблицы `mugustuns`
 --
 
 CREATE TABLE `mugustuns` (
@@ -444,7 +455,7 @@ CREATE TABLE `mugustuns` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `mugustuns`
+-- Дамп данных таблицы `mugustuns`
 --
 
 INSERT INTO `mugustuns` (`id`, `patent_photo`, `patent_ady_tm`, `patent_ady_ru`, `patent_ady_en`, `mug_ady_tm`, `mug_ady_ru`, `mug_ady_en`, `hunar_tm`, `hunar_ru`, `hunar_en`, `dusundiris_tm`, `dusundiris_ru`, `dusundiris_en`, `patent_photo1`, `created_at`, `updated_at`) VALUES
@@ -465,7 +476,7 @@ INSERT INTO `mugustuns` (`id`, `patent_photo`, `patent_ady_tm`, `patent_ady_ru`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `olimps`
+-- Структура таблицы `olimps`
 --
 
 CREATE TABLE `olimps` (
@@ -478,7 +489,7 @@ CREATE TABLE `olimps` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `olimps`
+-- Дамп данных таблицы `olimps`
 --
 
 INSERT INTO `olimps` (`id`, `olimp_at_tm`, `olimp_at_ru`, `olimp_at_en`, `created_at`, `updated_at`) VALUES
@@ -488,7 +499,7 @@ INSERT INTO `olimps` (`id`, `olimp_at_tm`, `olimp_at_ru`, `olimp_at_en`, `create
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Структура таблицы `orders`
 --
 
 CREATE TABLE `orders` (
@@ -511,7 +522,7 @@ CREATE TABLE `orders` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order_details`
+-- Структура таблицы `order_details`
 --
 
 CREATE TABLE `order_details` (
@@ -528,7 +539,7 @@ CREATE TABLE `order_details` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Структура таблицы `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -540,7 +551,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pos`
+-- Структура таблицы `pos`
 --
 
 CREATE TABLE `pos` (
@@ -557,7 +568,7 @@ CREATE TABLE `pos` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `salaries`
+-- Структура таблицы `salaries`
 --
 
 CREATE TABLE `salaries` (
@@ -574,7 +585,7 @@ CREATE TABLE `salaries` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `talyps`
+-- Структура таблицы `talyps`
 --
 
 CREATE TABLE `talyps` (
@@ -595,7 +606,7 @@ CREATE TABLE `talyps` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `talyps`
+-- Дамп данных таблицы `talyps`
 --
 
 INSERT INTO `talyps` (`id`, `photo`, `at_tm`, `at_ru`, `at_en`, `kurs_tm`, `kurs_ru`, `kurs_en`, `ders_tm`, `ders_ru`, `ders_en`, `yarys_id`, `created_at`, `updated_at`) VALUES
@@ -606,7 +617,7 @@ INSERT INTO `talyps` (`id`, `photo`, `at_tm`, `at_ru`, `at_en`, `kurs_tm`, `kurs
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tazeliks`
+-- Структура таблицы `tazeliks`
 --
 
 CREATE TABLE `tazeliks` (
@@ -629,7 +640,7 @@ CREATE TABLE `tazeliks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tazeliks`
+-- Дамп данных таблицы `tazeliks`
 --
 
 INSERT INTO `tazeliks` (`id`, `gun`, `ay`, `yyl`, `tema_tm`, `tema_ru`, `tema_en`, `dusundiris_tm`, `dusundiris_ru`, `dusundiris_en`, `tazelik_tm`, `tazelik_ru`, `tazelik_en`, `photo`, `created_at`, `updated_at`) VALUES
@@ -640,7 +651,7 @@ INSERT INTO `tazeliks` (`id`, `gun`, `ay`, `yyl`, `tema_tm`, `tema_ru`, `tema_en
 -- --------------------------------------------------------
 
 --
--- Table structure for table `temafiles`
+-- Структура таблицы `temafiles`
 --
 
 CREATE TABLE `temafiles` (
@@ -655,7 +666,7 @@ CREATE TABLE `temafiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `temafiles`
+-- Дамп данных таблицы `temafiles`
 --
 
 INSERT INTO `temafiles` (`id`, `temafile_at_tm`, `temafile_at_ru`, `temafile_at_en`, `tema_id`, `temafile`, `created_at`, `updated_at`) VALUES
@@ -666,7 +677,7 @@ INSERT INTO `temafiles` (`id`, `temafile_at_tm`, `temafile_at_ru`, `temafile_at_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `temas`
+-- Структура таблицы `temas`
 --
 
 CREATE TABLE `temas` (
@@ -680,7 +691,7 @@ CREATE TABLE `temas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `temas`
+-- Дамп данных таблицы `temas`
 --
 
 INSERT INTO `temas` (`id`, `tema_tm`, `tema_ru`, `tema_en`, `ders_id`, `created_at`, `updated_at`) VALUES
@@ -690,7 +701,7 @@ INSERT INTO `temas` (`id`, `tema_tm`, `tema_ru`, `tema_en`, `ders_id`, `created_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ugurs`
+-- Структура таблицы `ugurs`
 --
 
 CREATE TABLE `ugurs` (
@@ -703,7 +714,7 @@ CREATE TABLE `ugurs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `ugurs`
+-- Дамп данных таблицы `ugurs`
 --
 
 INSERT INTO `ugurs` (`id`, `ugur_at_tm`, `ugur_at_ru`, `ugur_at_en`, `created_at`, `updated_at`) VALUES
@@ -718,7 +729,7 @@ INSERT INTO `ugurs` (`id`, `ugur_at_tm`, `ugur_at_ru`, `ugur_at_en`, `created_at
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Структура таблицы `users`
 --
 
 CREATE TABLE `users` (
@@ -733,16 +744,16 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Дамп данных таблицы `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(3, 'User', 'user@gmail.com', NULL, '$2y$10$VTYyGy3pW.kIN5qXMsYm6uN57OxwKdzmWaeDjV3Dkt4HqJxgCyXLm', NULL, NULL, NULL);
+(4, 'TDEI', 'kgullyewprog@gmail.com', NULL, '$2y$10$I4ybPsJVjIN2l2AaOb/nae2RDXYsVnoo2i6k1RfpLY8koIKGr1aAK', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ustuns`
+-- Структура таблицы `ustuns`
 --
 
 CREATE TABLE `ustuns` (
@@ -763,7 +774,7 @@ CREATE TABLE `ustuns` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `ustuns`
+-- Дамп данных таблицы `ustuns`
 --
 
 INSERT INTO `ustuns` (`id`, `photo`, `talyp_at_tm`, `talyp_at_ru`, `talyp_at_en`, `ders_tm`, `ders_ru`, `ders_en`, `orun_tm`, `orun_ru`, `orun_en`, `olimp_id`, `created_at`, `updated_at`) VALUES
@@ -784,7 +795,7 @@ INSERT INTO `ustuns` (`id`, `photo`, `talyp_at_tm`, `talyp_at_ru`, `talyp_at_en`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `yaryts`
+-- Структура таблицы `yaryts`
 --
 
 CREATE TABLE `yaryts` (
@@ -797,7 +808,7 @@ CREATE TABLE `yaryts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `yaryts`
+-- Дамп данных таблицы `yaryts`
 --
 
 INSERT INTO `yaryts` (`id`, `yarys_at_tm`, `yarys_at_ru`, `yarys_at_en`, `created_at`, `updated_at`) VALUES
@@ -806,7 +817,7 @@ INSERT INTO `yaryts` (`id`, `yarys_at_tm`, `yarys_at_ru`, `yarys_at_en`, `create
 -- --------------------------------------------------------
 
 --
--- Table structure for table `yyls`
+-- Структура таблицы `yyls`
 --
 
 CREATE TABLE `yyls` (
@@ -817,386 +828,388 @@ CREATE TABLE `yyls` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `yyls`
+-- Дамп данных таблицы `yyls`
 --
 
 INSERT INTO `yyls` (`id`, `yyl`, `created_at`, `updated_at`) VALUES
-(3, '2022', '2022-03-03 18:29:16', '2022-03-03 18:29:16');
+(3, '2022', '2022-03-03 18:29:16', '2022-03-03 18:29:16'),
+(4, '2023', '2022-03-10 11:47:18', '2022-03-10 11:47:18'),
+(5, '2024', '2022-03-11 16:27:09', '2022-03-11 16:27:09');
 
 --
--- Indexes for dumped tables
+-- Индексы сохранённых таблиц
 --
 
 --
--- Indexes for table `baradas`
+-- Индексы таблицы `baradas`
 --
 ALTER TABLE `baradas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `baslesiks`
+-- Индексы таблицы `baslesiks`
 --
 ALTER TABLE `baslesiks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `carousels`
+-- Индексы таблицы `carousels`
 --
 ALTER TABLE `carousels`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `categories`
+-- Индексы таблицы `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `customers`
+-- Индексы таблицы `customers`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `eders`
+-- Индексы таблицы `eders`
 --
 ALTER TABLE `eders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `edusundiris`
+-- Индексы таблицы `edusundiris`
 --
 ALTER TABLE `edusundiris`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `expenses`
+-- Индексы таблицы `expenses`
 --
 ALTER TABLE `expenses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `extra`
+-- Индексы таблицы `extra`
 --
 ALTER TABLE `extra`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `failed_jobs`
+-- Индексы таблицы `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `files`
+-- Индексы таблицы `files`
 --
 ALTER TABLE `files`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `habars`
+-- Индексы таблицы `habars`
 --
 ALTER TABLE `habars`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `hyzmats`
+-- Индексы таблицы `hyzmats`
 --
 ALTER TABLE `hyzmats`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kafwebols`
+-- Индексы таблицы `kafwebols`
 --
 ALTER TABLE `kafwebols`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Индексы таблицы `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `mugustuns`
+-- Индексы таблицы `mugustuns`
 --
 ALTER TABLE `mugustuns`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `olimps`
+-- Индексы таблицы `olimps`
 --
 ALTER TABLE `olimps`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `orders`
+-- Индексы таблицы `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `order_details`
+-- Индексы таблицы `order_details`
 --
 ALTER TABLE `order_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Индексы таблицы `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `pos`
+-- Индексы таблицы `pos`
 --
 ALTER TABLE `pos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `salaries`
+-- Индексы таблицы `salaries`
 --
 ALTER TABLE `salaries`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `talyps`
+-- Индексы таблицы `talyps`
 --
 ALTER TABLE `talyps`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tazeliks`
+-- Индексы таблицы `tazeliks`
 --
 ALTER TABLE `tazeliks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `temafiles`
+-- Индексы таблицы `temafiles`
 --
 ALTER TABLE `temafiles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `temas`
+-- Индексы таблицы `temas`
 --
 ALTER TABLE `temas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ugurs`
+-- Индексы таблицы `ugurs`
 --
 ALTER TABLE `ugurs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Индексы таблицы `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- Indexes for table `ustuns`
+-- Индексы таблицы `ustuns`
 --
 ALTER TABLE `ustuns`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `yaryts`
+-- Индексы таблицы `yaryts`
 --
 ALTER TABLE `yaryts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `yyls`
+-- Индексы таблицы `yyls`
 --
 ALTER TABLE `yyls`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT для сохранённых таблиц
 --
 
 --
--- AUTO_INCREMENT for table `baradas`
+-- AUTO_INCREMENT для таблицы `baradas`
 --
 ALTER TABLE `baradas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `baslesiks`
+-- AUTO_INCREMENT для таблицы `baslesiks`
 --
 ALTER TABLE `baslesiks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `carousels`
+-- AUTO_INCREMENT для таблицы `carousels`
 --
 ALTER TABLE `carousels`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT для таблицы `customers`
 --
 ALTER TABLE `customers`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `eders`
+-- AUTO_INCREMENT для таблицы `eders`
 --
 ALTER TABLE `eders`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `edusundiris`
+-- AUTO_INCREMENT для таблицы `edusundiris`
 --
 ALTER TABLE `edusundiris`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `expenses`
+-- AUTO_INCREMENT для таблицы `expenses`
 --
 ALTER TABLE `expenses`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `extra`
+-- AUTO_INCREMENT для таблицы `extra`
 --
 ALTER TABLE `extra`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT для таблицы `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `files`
+-- AUTO_INCREMENT для таблицы `files`
 --
 ALTER TABLE `files`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT for table `habars`
+-- AUTO_INCREMENT для таблицы `habars`
 --
 ALTER TABLE `habars`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `hyzmats`
+-- AUTO_INCREMENT для таблицы `hyzmats`
 --
 ALTER TABLE `hyzmats`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `kafwebols`
+-- AUTO_INCREMENT для таблицы `kafwebols`
 --
 ALTER TABLE `kafwebols`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
--- AUTO_INCREMENT for table `mugustuns`
+-- AUTO_INCREMENT для таблицы `mugustuns`
 --
 ALTER TABLE `mugustuns`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `olimps`
+-- AUTO_INCREMENT для таблицы `olimps`
 --
 ALTER TABLE `olimps`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `order_details`
+-- AUTO_INCREMENT для таблицы `order_details`
 --
 ALTER TABLE `order_details`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `pos`
+-- AUTO_INCREMENT для таблицы `pos`
 --
 ALTER TABLE `pos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `salaries`
+-- AUTO_INCREMENT для таблицы `salaries`
 --
 ALTER TABLE `salaries`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `talyps`
+-- AUTO_INCREMENT для таблицы `talyps`
 --
 ALTER TABLE `talyps`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `tazeliks`
+-- AUTO_INCREMENT для таблицы `tazeliks`
 --
 ALTER TABLE `tazeliks`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `temafiles`
+-- AUTO_INCREMENT для таблицы `temafiles`
 --
 ALTER TABLE `temafiles`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `temas`
+-- AUTO_INCREMENT для таблицы `temas`
 --
 ALTER TABLE `temas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `ugurs`
+-- AUTO_INCREMENT для таблицы `ugurs`
 --
 ALTER TABLE `ugurs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `ustuns`
+-- AUTO_INCREMENT для таблицы `ustuns`
 --
 ALTER TABLE `ustuns`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `yaryts`
+-- AUTO_INCREMENT для таблицы `yaryts`
 --
 ALTER TABLE `yaryts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `yyls`
+-- AUTO_INCREMENT для таблицы `yyls`
 --
 ALTER TABLE `yyls`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
