@@ -1,1 +1,824 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[53],{64:function(t,e,a){"use strict";a.r(e);var s;function r(t,e,a){return e in t?Object.defineProperty(t,e,{value:a,enumerable:!0,configurable:!0,writable:!0}):t[e]=a,t}var o=(r(s={created:function(){User.loggedIn()||this.$router.push({name:"/tdeiadmin"})},data:function(){return{form:{gun:"",ay:"",yyl:"",tema_tm:"",dusundiris_tm:"",tazelik_tm:"",tema_ru:"",dusundiris_ru:"",tazelik_ru:"",tema_en:"",dusundiris_en:"",tazelik_en:"",photo:"",newphoto:""},errors:{}}}},"created",(function(){var t=this,e=this.$route.params.id;axios.get("/api/tazelik/"+e).then((function(e){var a=e.data;return t.form=a})).catch(console.log("error"))})),r(s,"methods",{onFileSelected:function(t){var e=this,a=t.target.files[0];if(a.size>2048770)Notification.image_validation();else{var s=new FileReader;s.onload=function(t){e.form.newphoto=t.target.result},s.readAsDataURL(a)}},tazelikUpdate:function(){var t=this,e=this.$route.params.id;axios.patch("/api/tazelik/"+e,this.form).then((function(){t.$router.push({name:"tazelik"}),Notification.success()})).catch((function(e){return t.errors=e.response.data.errors}))}}),s),i=a(0),l=Object(i.a)(o,(function(){var t=this,e=t.$createElement,a=t._self._c||e;return a("div",[a("div",{staticClass:"row"},[a("router-link",{staticClass:"btn btn-primary",attrs:{to:"/tazelik"}},[t._v("Ahli Tazelik ")])],1),t._v(" "),a("div",{staticClass:"row justify-content-center"},[a("div",{staticClass:"col-xl-12 col-lg-12 col-md-12"},[a("div",{staticClass:"card shadow-sm my-5"},[a("div",{staticClass:"card-body p-0"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-lg-12"},[a("div",{staticClass:"login-form"},[t._m(0),t._v(" "),a("form",{staticClass:"user",attrs:{enctype:"multipart/form-data"},on:{submit:function(e){return e.preventDefault(),t.tazelikUpdate(e)}}},[a("div",{staticClass:"form-group"},[a("div",{staticClass:"form-row"},[a("div",{staticClass:"col-md-4"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.gun,expression:"form.gun"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Gun"},domProps:{value:t.form.gun},on:{input:function(e){e.target.composing||t.$set(t.form,"gun",e.target.value)}}})]),t._v(" "),a("div",{staticClass:"col-md-4"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.ay,expression:"form.ay"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Ay"},domProps:{value:t.form.ay},on:{input:function(e){e.target.composing||t.$set(t.form,"ay",e.target.value)}}})]),t._v(" "),a("div",{staticClass:"col-md-4"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.yyl,expression:"form.yyl"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Yyl"},domProps:{value:t.form.yyl},on:{input:function(e){e.target.composing||t.$set(t.form,"yyl",e.target.value)}}})])])]),t._v(" "),a("br"),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"form-row"},[a("div",{staticClass:"col-md-6"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.tema_tm,expression:"form.tema_tm"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Tema_TM"},domProps:{value:t.form.tema_tm},on:{input:function(e){e.target.composing||t.$set(t.form,"tema_tm",e.target.value)}}})]),t._v(" "),a("div",{staticClass:"col-md-6"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.dusundiris_tm,expression:"form.dusundiris_tm"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Dusundiris_TM"},domProps:{value:t.form.dusundiris_tm},on:{input:function(e){e.target.composing||t.$set(t.form,"dusundiris_tm",e.target.value)}}})])])]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"form-row"},[a("div",{staticClass:"col-md-12"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.tazelik_tm,expression:"form.tazelik_tm"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Tazelik_TM"},domProps:{value:t.form.tazelik_tm},on:{input:function(e){e.target.composing||t.$set(t.form,"tazelik_tm",e.target.value)}}})])])]),t._v(" "),a("br"),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"form-row"},[a("div",{staticClass:"col-md-6"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.tema_ru,expression:"form.tema_ru"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Tema_RU"},domProps:{value:t.form.tema_ru},on:{input:function(e){e.target.composing||t.$set(t.form,"tema_ru",e.target.value)}}})]),t._v(" "),a("div",{staticClass:"col-md-6"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.dusundiris_ru,expression:"form.dusundiris_ru"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Dusundiris_RU"},domProps:{value:t.form.dusundiris_ru},on:{input:function(e){e.target.composing||t.$set(t.form,"dusundiris_ru",e.target.value)}}})])])]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"form-row"},[a("div",{staticClass:"col-md-12"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.tazelik_ru,expression:"form.tazelik_ru"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Tazelik_RU"},domProps:{value:t.form.tazelik_ru},on:{input:function(e){e.target.composing||t.$set(t.form,"tazelik_ru",e.target.value)}}})])])]),t._v(" "),a("br"),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"form-row"},[a("div",{staticClass:"col-md-6"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.tema_en,expression:"form.tema_en"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Tema_EN"},domProps:{value:t.form.tema_en},on:{input:function(e){e.target.composing||t.$set(t.form,"tema_en",e.target.value)}}})]),t._v(" "),a("div",{staticClass:"col-md-6"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.dusundiris_en,expression:"form.dusundiris_en"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Dusundiris_EN"},domProps:{value:t.form.dusundiris_en},on:{input:function(e){e.target.composing||t.$set(t.form,"dusundiris_en",e.target.value)}}})])])]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"form-row"},[a("div",{staticClass:"col-md-12"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.form.tazelik_en,expression:"form.tazelik_en"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Tazelik_EN"},domProps:{value:t.form.tazelik_en},on:{input:function(e){e.target.composing||t.$set(t.form,"tazelik_en",e.target.value)}}})])])]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"form-row"},[a("div",{staticClass:"col-md-6"},[a("input",{staticClass:"custom-file-input",attrs:{type:"file",id:"customFile"},on:{change:t.onFileSelected}}),t._v(" "),t.errors.photo?a("small",{staticClass:"text-danger"},[t._v(" "+t._s(t.errors.photo[0])+" ")]):t._e(),t._v(" "),a("label",{staticClass:"custom-file-label",attrs:{for:"customFile"}},[t._v("Choose file")])]),t._v(" "),a("div",{staticClass:"col-md-6"},[a("img",{staticStyle:{height:"40px",width:"40px"},attrs:{src:t.form.photo}})])])]),t._v(" "),t._m(1)]),t._v(" "),a("hr"),t._v(" "),a("div",{staticClass:"text-center"}),t._v(" "),a("div",{staticClass:"text-center"})])])])])])])])])}),[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"text-center"},[e("h1",{staticClass:"h4 text-gray-900 mb-4"},[this._v(" Tazelik Update")])])},function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"form-group"},[e("button",{staticClass:"btn btn-primary btn-block",attrs:{type:"submit"}},[this._v("Uytget")])])}],!1,null,null,null);e.default=l.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[53],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tazelik/create.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/tazelik/create.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  created: function created() {
+    if (!User.loggedIn()) {
+      this.$router.push({
+        name: '/tdeiadmin'
+      });
+    }
+  },
+  data: function data() {
+    return {
+      form: {
+        gun: null,
+        ay: null,
+        yyl: null,
+        tema_tm: null,
+        tema_ru: null,
+        tema_en: null,
+        dusundiris_tm: null,
+        tazelik_tm: null,
+        dusundiris_ru: null,
+        tazelik_ru: null,
+        dusundiris_en: null,
+        tazelik_en: null,
+        photo: null
+      },
+      errors: {}
+    };
+  },
+  methods: {
+    onFileSelected: function onFileSelected(event) {
+      var _this = this;
+
+      var file = event.target.files[0];
+
+      if (file.size > 2048770) {
+        Notification.image_validation();
+      } else {
+        var reader = new FileReader();
+
+        reader.onload = function (event) {
+          _this.form.photo = event.target.result;
+          console.log(event.target.result);
+        };
+
+        reader.readAsDataURL(file);
+      }
+    },
+    tazelikInsert: function tazelikInsert() {
+      var _this2 = this;
+
+      axios.post('/api/tazelik', this.form).then(function () {
+        _this2.$router.push({
+          name: 'tazelik'
+        });
+
+        Notification.success();
+      })["catch"](function (error) {
+        return _this2.errors = error.response.data.errors;
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tazelik/create.vue?vue&type=template&id=4a915880&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/tazelik/create.vue?vue&type=template&id=4a915880& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "row" },
+      [
+        _c(
+          "router-link",
+          {
+            staticClass: "btn btn-primary",
+            attrs: { to: "/tdeiadmin/tazelik" }
+          },
+          [_vm._v("Ahli Tazelik ")]
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-xl-12 col-lg-12 col-md-12" }, [
+        _c("div", { staticClass: "card shadow-sm my-5" }, [
+          _c("div", { staticClass: "card-body p-0" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-12" }, [
+                _c("div", { staticClass: "login-form" }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c(
+                    "form",
+                    {
+                      staticClass: "user",
+                      attrs: { enctype: "multipart/form-data" },
+                      on: {
+                        submit: function($event) {
+                          $event.preventDefault()
+                          return _vm.tazelikInsert($event)
+                        }
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-4" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.gun,
+                                  expression: "form.gun"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", placeholder: "Gun" },
+                              domProps: { value: _vm.form.gun },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(_vm.form, "gun", $event.target.value)
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-4" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.ay,
+                                  expression: "form.ay"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", placeholder: "Ay" },
+                              domProps: { value: _vm.form.ay },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(_vm.form, "ay", $event.target.value)
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-4" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.yyl,
+                                  expression: "form.yyl"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", placeholder: "Yyl" },
+                              domProps: { value: _vm.form.yyl },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(_vm.form, "yyl", $event.target.value)
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.tema_tm,
+                                  expression: "form.tema_tm"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", placeholder: "Tema_TM" },
+                              domProps: { value: _vm.form.tema_tm },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "tema_tm",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.dusundiris_tm,
+                                  expression: "form.dusundiris_tm"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Dusundiris_TM"
+                              },
+                              domProps: { value: _vm.form.dusundiris_tm },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "dusundiris_tm",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-12" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.tazelik_tm,
+                                  expression: "form.tazelik_tm"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Tazelik_TM"
+                              },
+                              domProps: { value: _vm.form.tazelik_tm },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "tazelik_tm",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.tema_ru,
+                                  expression: "form.tema_ru"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", placeholder: "Tema_RU" },
+                              domProps: { value: _vm.form.tema_ru },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "tema_ru",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.dusundiris_ru,
+                                  expression: "form.dusundiris_ru"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Dusundiris_RU"
+                              },
+                              domProps: { value: _vm.form.dusundiris_ru },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "dusundiris_ru",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-12" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.tazelik_ru,
+                                  expression: "form.tazelik_ru"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Tazelik_RU"
+                              },
+                              domProps: { value: _vm.form.tazelik_ru },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "tazelik_ru",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.tema_en,
+                                  expression: "form.tema_en"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", placeholder: "Tema_EN" },
+                              domProps: { value: _vm.form.tema_en },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "tema_en",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.dusundiris_en,
+                                  expression: "form.dusundiris_en"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Dusundiris_EN"
+                              },
+                              domProps: { value: _vm.form.dusundiris_en },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "dusundiris_en",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-12" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.tazelik_en,
+                                  expression: "form.tazelik_en"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Tazelik_EN"
+                              },
+                              domProps: { value: _vm.form.tazelik_en },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "tazelik_en",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              staticClass: "custom-file-input",
+                              attrs: { type: "file", id: "customFile" },
+                              on: { change: _vm.onFileSelected }
+                            }),
+                            _vm._v(" "),
+                            _vm.errors.photo
+                              ? _c("small", { staticClass: "text-danger" }, [
+                                  _vm._v(
+                                    " " + _vm._s(_vm.errors.photo[0]) + " "
+                                  )
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              {
+                                staticClass: "custom-file-label",
+                                attrs: { for: "customFile" }
+                              },
+                              [_vm._v("Choose file")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("img", {
+                              staticStyle: { height: "40px", width: "40px" },
+                              attrs: { src: _vm.form.photo }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(1)
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "text-center" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "text-center" })
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
+        _vm._v("Tazelik gosmak")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-primary btn-block", attrs: { type: "submit" } },
+        [_vm._v("Submit")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/tazelik/create.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/tazelik/create.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _create_vue_vue_type_template_id_4a915880___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create.vue?vue&type=template&id=4a915880& */ "./resources/js/components/tazelik/create.vue?vue&type=template&id=4a915880&");
+/* harmony import */ var _create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./create.vue?vue&type=script&lang=js& */ "./resources/js/components/tazelik/create.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _create_vue_vue_type_template_id_4a915880___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _create_vue_vue_type_template_id_4a915880___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/tazelik/create.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/tazelik/create.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/tazelik/create.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./create.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tazelik/create.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/tazelik/create.vue?vue&type=template&id=4a915880&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/tazelik/create.vue?vue&type=template&id=4a915880& ***!
+  \***********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_template_id_4a915880___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./create.vue?vue&type=template&id=4a915880& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/tazelik/create.vue?vue&type=template&id=4a915880&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_template_id_4a915880___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_template_id_4a915880___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

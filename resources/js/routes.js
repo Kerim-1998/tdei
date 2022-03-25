@@ -6,16 +6,16 @@ export const routes = [
     name:'/tdeiadmin',
     component: () => import(/* webpackChunckName: "/tdeiadmin" */ "./components/auth/login.vue")
   },
-  { 
-    path: '/tdeiadmin/register', 
-    name:'register',
-    component: () => import(/* webpackChunckName: "register" */ "./components/auth/register.vue")
-  },
-  { 
-    path: '/tdeiadmin/forget', 
-    name:'forget',
-    component: () => import(/* webpackChunckName: "forget" */ "./components/auth/forget.vue")
-  },
+  // { 
+  //   path: '/tdeiadmin/register', 
+  //   name:'register',
+  //   component: () => import(/* webpackChunckName: "register" */ "./components/auth/register.vue")
+  // },
+  // { 
+  //   path: '/tdeiadmin/forget', 
+  //   name:'forget',
+  //   component: () => import(/* webpackChunckName: "forget" */ "./components/auth/forget.vue")
+  // },
   { 
     path: '/tdeiadmin/logout', 
     name:'logout',
@@ -201,6 +201,21 @@ export const routes = [
     component: () => import(/* webpackChunckName: "yyl" */ "./components/yyl/index.vue")
   },
   { 
+    path: '/tdeiadmin/store-dalasgar', 
+    name:'store-dalasgar',
+    component: () => import(/* webpackChunckName: "store-dalasgar" */ "./components/dalasgar/create.vue")
+  },
+  { 
+    path: '/tdeiadmin/dalasgar', 
+    name:'dalasgar',
+    component: () => import(/* webpackChunckName: "dalasgar" */ "./components/dalasgar/index.vue")
+  },
+  { 
+    path: '/tdeiadmin/edit-dalasgar/:id', 
+    name:'edit-dalasgar',
+    component: () => import(/* webpackChunckName: "edit-dalasgar" */ "./components/dalasgar/edit.vue")
+  },
+  { 
     path: '/tdeiadmin/store-baslesik', 
     name:'store-baslesik',
     component: () => import(/* webpackChunckName: "store-baslesik" */ "./components/baslesik/create.vue")
@@ -328,8 +343,11 @@ export const routes = [
     name:'baslesikfrontsingle',
     component: () => import(/* webpackChunckName: "baslesikfrontsingle" */ "./components/front/baslesikfrontsingle.vue")
   },
-
-
+  { 
+    path: '/dalasgar', 
+    name:'dalasgarfront',
+    component: () => import(/* webpackChunckName: "dalasgarfront" */ "./components/front/dalasgar.vue")
+  },
 
 
 

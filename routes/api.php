@@ -29,6 +29,7 @@ Route::apiResource('/olimp', 'Api\OlimpController');
 Route::apiResource('/ustun', 'Api\UstunController');
 Route::apiResource('/yarys', 'Api\YarysController');
 Route::apiResource('/talyp', 'Api\TalypController');
+Route::apiResource('/dalasgar', 'Api\DalasgarController');
 Route::apiResource('/baslesik', 'Api\BaslesikController');
 Route::apiResource('/yyl', 'Api\YylController');
 Route::apiResource('/edusundiris', 'Api\EdusundirisController');
@@ -60,6 +61,6 @@ Route::apiResource('/edusundirisfront', 'Apifront\EdusundirisfrontController')->
 Route::apiResource('/dersfront', 'Apifront\DersfrontController')->only(['index']);
 Route::apiResource('/temafront', 'Apifront\TemafrontController')->only(['index']);
 Route::apiResource('/temafilefront', 'Apifront\TemafilefrontController')->only(['index']);
-
+Route::apiResource('/dalasgarfront', 'Apifront\DalasgarfrontController')->only(['index']);
 
 

@@ -295,6 +295,24 @@
         </div>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap19"
+          aria-expanded="true" aria-controls="collapseBootstrap19">
+          <i class="far fa-fw fa-window-maximize"></i>
+          <span>Dalasgarler</span>
+        </a>
+        <div id="collapseBootstrap19" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+
+   <router-link class="collapse-item" to="/tdeiadmin/store-dalasgar">Add Dalasgar</router-link>
+   <router-link class="collapse-item" to="/tdeiadmin/dalasgar">All Dalasgarler</router-link>
+
+          </div>
+        </div>
+      </li>
+
+
+
 <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap14"
           aria-expanded="true" aria-controls="collapseBootstrap14">

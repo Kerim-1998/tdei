@@ -1,1 +1,591 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[27],{65:function(t,s,e){"use strict";e.r(s);var a={created:function(){User.loggedIn()||this.$router.push({name:"/tdeiadmin"})},data:function(){return{form:{tema_tm:null,dusundiris_tm:null,tema_ru:null,dusundiris_ru:null,tema_en:null,dusundiris_en:null,photo:null},errors:{}}},methods:{onFileSelected:function(t){var s=this,e=t.target.files[0];if(e.size>2048770)Notification.image_validation();else{var a=new FileReader;a.onload=function(t){s.form.photo=t.target.result,console.log(t.target.result)},a.readAsDataURL(e)}},baradaInsert:function(){var t=this;axios.post("/api/barada",this.form).then((function(){t.$router.push({name:"barada"}),Notification.success()})).catch((function(s){return t.errors=s.response.data.errors}))}}},r=e(0),i=Object(r.a)(a,(function(){var t=this,s=t.$createElement,e=t._self._c||s;return e("div",[e("div",{staticClass:"row"},[e("router-link",{staticClass:"btn btn-primary",attrs:{to:"/tdeiadmin/barada"}},[t._v("Ahli Barada ")])],1),t._v(" "),e("div",{staticClass:"row justify-content-center"},[e("div",{staticClass:"col-xl-12 col-lg-12 col-md-12"},[e("div",{staticClass:"card shadow-sm my-5"},[e("div",{staticClass:"card-body p-0"},[e("div",{staticClass:"row"},[e("div",{staticClass:"col-lg-12"},[e("div",{staticClass:"login-form"},[t._m(0),t._v(" "),e("form",{staticClass:"user",attrs:{enctype:"multipart/form-data"},on:{submit:function(s){return s.preventDefault(),t.baradaInsert(s)}}},[e("div",{staticClass:"form-group"},[e("div",{staticClass:"form-row"},[e("div",{staticClass:"col-md-4"},[e("input",{directives:[{name:"model",rawName:"v-model",value:t.form.tema_tm,expression:"form.tema_tm"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Tema_TM"},domProps:{value:t.form.tema_tm},on:{input:function(s){s.target.composing||t.$set(t.form,"tema_tm",s.target.value)}}})]),t._v(" "),e("div",{staticClass:"col-md-8"},[e("input",{directives:[{name:"model",rawName:"v-model",value:t.form.dusundiris_tm,expression:"form.dusundiris_tm"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Dusundiris_TM"},domProps:{value:t.form.dusundiris_tm},on:{input:function(s){s.target.composing||t.$set(t.form,"dusundiris_tm",s.target.value)}}})])])]),t._v(" "),e("br"),t._v(" "),e("div",{staticClass:"form-group"},[e("div",{staticClass:"form-row"},[e("div",{staticClass:"col-md-4"},[e("input",{directives:[{name:"model",rawName:"v-model",value:t.form.tema_ru,expression:"form.tema_ru"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Tema_RU"},domProps:{value:t.form.tema_ru},on:{input:function(s){s.target.composing||t.$set(t.form,"tema_ru",s.target.value)}}})]),t._v(" "),e("div",{staticClass:"col-md-8"},[e("input",{directives:[{name:"model",rawName:"v-model",value:t.form.dusundiris_ru,expression:"form.dusundiris_ru"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Dusundiris_RU"},domProps:{value:t.form.dusundiris_ru},on:{input:function(s){s.target.composing||t.$set(t.form,"dusundiris_ru",s.target.value)}}})])])]),t._v(" "),e("br"),t._v(" "),e("div",{staticClass:"form-group"},[e("div",{staticClass:"form-row"},[e("div",{staticClass:"col-md-4"},[e("input",{directives:[{name:"model",rawName:"v-model",value:t.form.tema_en,expression:"form.tema_en"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Tema_EN"},domProps:{value:t.form.tema_en},on:{input:function(s){s.target.composing||t.$set(t.form,"tema_en",s.target.value)}}})]),t._v(" "),e("div",{staticClass:"col-md-8"},[e("input",{directives:[{name:"model",rawName:"v-model",value:t.form.dusundiris_en,expression:"form.dusundiris_en"}],staticClass:"form-control",attrs:{type:"text",placeholder:"Dusundiris_EN"},domProps:{value:t.form.dusundiris_en},on:{input:function(s){s.target.composing||t.$set(t.form,"dusundiris_en",s.target.value)}}})])])]),t._v(" "),e("div",{staticClass:"form-group"},[e("div",{staticClass:"form-row"},[e("div",{staticClass:"col-md-6"},[e("input",{staticClass:"custom-file-input",attrs:{type:"file",id:"customFile"},on:{change:t.onFileSelected}}),t._v(" "),t.errors.photo?e("small",{staticClass:"text-danger"},[t._v(" "+t._s(t.errors.photo[0])+" ")]):t._e(),t._v(" "),e("label",{staticClass:"custom-file-label",attrs:{for:"customFile"}},[t._v("Choose file")])]),t._v(" "),e("div",{staticClass:"col-md-6"},[e("img",{staticStyle:{height:"40px",width:"40px"},attrs:{src:t.form.photo}})])])]),t._v(" "),t._m(1)]),t._v(" "),e("hr"),t._v(" "),e("div",{staticClass:"text-center"}),t._v(" "),e("div",{staticClass:"text-center"})])])])])])])])])}),[function(){var t=this.$createElement,s=this._self._c||t;return s("div",{staticClass:"text-center"},[s("h1",{staticClass:"h4 text-gray-900 mb-4"},[this._v("Barada gosmak")])])},function(){var t=this.$createElement,s=this._self._c||t;return s("div",{staticClass:"form-group"},[s("button",{staticClass:"btn btn-primary btn-block",attrs:{type:"submit"}},[this._v("Submit")])])}],!1,null,null,null);s.default=i.exports}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[27],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/barada/create.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/barada/create.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  created: function created() {
+    if (!User.loggedIn()) {
+      this.$router.push({
+        name: '/tdeiadmin'
+      });
+    }
+  },
+  data: function data() {
+    return {
+      form: {
+        tema_tm: null,
+        dusundiris_tm: null,
+        tema_ru: null,
+        dusundiris_ru: null,
+        tema_en: null,
+        dusundiris_en: null,
+        photo: null
+      },
+      errors: {}
+    };
+  },
+  methods: {
+    onFileSelected: function onFileSelected(event) {
+      var _this = this;
+
+      var file = event.target.files[0];
+
+      if (file.size > 2048770) {
+        Notification.image_validation();
+      } else {
+        var reader = new FileReader();
+
+        reader.onload = function (event) {
+          _this.form.photo = event.target.result;
+          console.log(event.target.result);
+        };
+
+        reader.readAsDataURL(file);
+      }
+    },
+    baradaInsert: function baradaInsert() {
+      var _this2 = this;
+
+      axios.post('/api/barada', this.form).then(function () {
+        _this2.$router.push({
+          name: 'barada'
+        });
+
+        Notification.success();
+      })["catch"](function (error) {
+        return _this2.errors = error.response.data.errors;
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/barada/create.vue?vue&type=template&id=95ef30b6&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/barada/create.vue?vue&type=template&id=95ef30b6& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "row" },
+      [
+        _c(
+          "router-link",
+          {
+            staticClass: "btn btn-primary",
+            attrs: { to: "/tdeiadmin/barada" }
+          },
+          [_vm._v("Ahli Barada ")]
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-xl-12 col-lg-12 col-md-12" }, [
+        _c("div", { staticClass: "card shadow-sm my-5" }, [
+          _c("div", { staticClass: "card-body p-0" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-12" }, [
+                _c("div", { staticClass: "login-form" }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c(
+                    "form",
+                    {
+                      staticClass: "user",
+                      attrs: { enctype: "multipart/form-data" },
+                      on: {
+                        submit: function($event) {
+                          $event.preventDefault()
+                          return _vm.baradaInsert($event)
+                        }
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-4" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.tema_tm,
+                                  expression: "form.tema_tm"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", placeholder: "Tema_TM" },
+                              domProps: { value: _vm.form.tema_tm },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "tema_tm",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-8" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.dusundiris_tm,
+                                  expression: "form.dusundiris_tm"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Dusundiris_TM"
+                              },
+                              domProps: { value: _vm.form.dusundiris_tm },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "dusundiris_tm",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-4" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.tema_ru,
+                                  expression: "form.tema_ru"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", placeholder: "Tema_RU" },
+                              domProps: { value: _vm.form.tema_ru },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "tema_ru",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-8" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.dusundiris_ru,
+                                  expression: "form.dusundiris_ru"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Dusundiris_RU"
+                              },
+                              domProps: { value: _vm.form.dusundiris_ru },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "dusundiris_ru",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-4" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.tema_en,
+                                  expression: "form.tema_en"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: { type: "text", placeholder: "Tema_EN" },
+                              domProps: { value: _vm.form.tema_en },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "tema_en",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-8" }, [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.dusundiris_en,
+                                  expression: "form.dusundiris_en"
+                                }
+                              ],
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "text",
+                                placeholder: "Dusundiris_EN"
+                              },
+                              domProps: { value: _vm.form.dusundiris_en },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.form,
+                                    "dusundiris_en",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("div", { staticClass: "form-row" }, [
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("input", {
+                              staticClass: "custom-file-input",
+                              attrs: { type: "file", id: "customFile" },
+                              on: { change: _vm.onFileSelected }
+                            }),
+                            _vm._v(" "),
+                            _vm.errors.photo
+                              ? _c("small", { staticClass: "text-danger" }, [
+                                  _vm._v(
+                                    " " + _vm._s(_vm.errors.photo[0]) + " "
+                                  )
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "label",
+                              {
+                                staticClass: "custom-file-label",
+                                attrs: { for: "customFile" }
+                              },
+                              [_vm._v("Choose file")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-md-6" }, [
+                            _c("img", {
+                              staticStyle: { height: "40px", width: "40px" },
+                              attrs: { src: _vm.form.photo }
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(1)
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "text-center" }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "text-center" })
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
+        _vm._v("Barada gosmak")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-primary btn-block", attrs: { type: "submit" } },
+        [_vm._v("Submit")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/barada/create.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/barada/create.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _create_vue_vue_type_template_id_95ef30b6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./create.vue?vue&type=template&id=95ef30b6& */ "./resources/js/components/barada/create.vue?vue&type=template&id=95ef30b6&");
+/* harmony import */ var _create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./create.vue?vue&type=script&lang=js& */ "./resources/js/components/barada/create.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _create_vue_vue_type_template_id_95ef30b6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _create_vue_vue_type_template_id_95ef30b6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/barada/create.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/barada/create.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/barada/create.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./create.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/barada/create.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/barada/create.vue?vue&type=template&id=95ef30b6&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/barada/create.vue?vue&type=template&id=95ef30b6& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_template_id_95ef30b6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./create.vue?vue&type=template&id=95ef30b6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/barada/create.vue?vue&type=template&id=95ef30b6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_template_id_95ef30b6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_create_vue_vue_type_template_id_95ef30b6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

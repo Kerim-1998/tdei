@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 23 2022 г., 06:04
+-- Время создания: Мар 25 2022 г., 10:49
 -- Версия сервера: 10.1.38-MariaDB
 -- Версия PHP: 7.3.2
 
@@ -134,6 +134,29 @@ CREATE TABLE `customers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `dalasgars`
+--
+
+CREATE TABLE `dalasgars` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `dusundiris_tm` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dusundiris_ru` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dusundiris_en` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `dalasgars`
+--
+
+INSERT INTO `dalasgars` (`id`, `dusundiris_tm`, `dusundiris_ru`, `dusundiris_en`, `created_at`, `updated_at`) VALUES
+(1, 'sdas', 'de', 'tuyt', '2022-03-25 13:15:11', '2022-03-25 13:15:11'),
+(3, '1', '2', '3', '2022-03-25 13:26:31', '2022-03-25 13:26:31');
 
 -- --------------------------------------------------------
 
@@ -426,7 +449,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (38, '2022_03_04_061911_create_edusundiris_table', 19),
 (39, '2022_03_04_065423_create_eders_table', 20),
 (40, '2022_03_04_080249_create_temas_table', 21),
-(41, '2022_03_04_094118_create_temafiles_table', 22);
+(41, '2022_03_04_094118_create_temafiles_table', 22),
+(42, '2022_03_25_060126_create_dalasgars_table', 23);
 
 -- --------------------------------------------------------
 
@@ -871,6 +895,12 @@ ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `dalasgars`
+--
+ALTER TABLE `dalasgars`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `eders`
 --
 ALTER TABLE `eders`
@@ -1062,6 +1092,12 @@ ALTER TABLE `customers`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT для таблицы `dalasgars`
+--
+ALTER TABLE `dalasgars`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT для таблицы `eders`
 --
 ALTER TABLE `eders`
@@ -1071,7 +1107,7 @@ ALTER TABLE `eders`
 -- AUTO_INCREMENT для таблицы `edusundiris`
 --
 ALTER TABLE `edusundiris`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `expenses`
@@ -1119,7 +1155,7 @@ ALTER TABLE `kafwebols`
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT для таблицы `mugustuns`
